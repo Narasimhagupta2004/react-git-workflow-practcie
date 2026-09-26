@@ -1,0 +1,27 @@
+name: PR branch workflow
+on: 
+    push:
+    pull_request:
+        branches:
+            - main
+            - master
+            - dev
+
+jobs:
+    pr-workflow:
+        runs-on : Ubuntu-latest
+        steps: 
+            - name: checkout
+              uses: actions/checkout@v4
+
+            -  name: setup Node.js
+               uses: actions/setup-node@v4
+               with:
+                node-version: 24
+                cache: npm
+
+            - name: install dependency
+              run: npm install
+
+            - name: make react build
+              run: npm run build
