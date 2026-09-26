@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: test ESLint
-        run: npm run lint
+        run: npm test -- --watchAll=false
 
       - name: make react build
         run: npm run build
