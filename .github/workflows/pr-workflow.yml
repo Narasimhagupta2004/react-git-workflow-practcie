@@ -1,6 +1,6 @@
 name: PR branch workflow
 on: 
-    push:
+    #push:
     pull_request:
         branches:   # If branches removes then the workflow will run for pull requests targeting any branch
             - main
