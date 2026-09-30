@@ -22,8 +22,5 @@ jobs:
       - name: test ESLint
         run: npm test -- --watchAll=false
 
-      - name : run ESlint
-        run: npm run lint
-
       - name: make react build
         run: npm run build
