@@ -1,6 +1,6 @@
 name: first workflow
 
-on: push
+on: workflow_dispatch
 
 jobs:
   first-workflow-test:
